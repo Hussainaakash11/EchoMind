@@ -3,6 +3,7 @@ import { Brain, Mic, Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
+import logo from "@/assets/logo.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +25,8 @@ export const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <div className="flex items-center">
-                <div className="p-2 bg-gradient-hero rounded-lg mr-2">
-                  <Mic className="h-5 w-5 text-white" />
-                </div>
-                <div className="p-2 bg-gradient-hero rounded-lg">
-                  <Brain className="h-5 w-5 text-white" />
+                <div className="p-2 bg-gradient-black rounded-lg mr-2">
+                  <img src={logo} alt="Logo" className="h-10 w-auto" />
                 </div>
               </div>
               <span className="text-2xl font-bold gradient-text">EchoMind</span>
@@ -50,7 +48,7 @@ export const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            
+
             {/* Theme Toggle */}
             <Button
               variant="ghost"
@@ -62,7 +60,7 @@ export const Navbar = () => {
               <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
-            
+
             <Link to="/login">
               <Button className="btn-hero">Get Started</Button>
             </Link>
@@ -98,7 +96,7 @@ export const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile Theme Toggle */}
               <Button
                 variant="ghost"
@@ -110,10 +108,13 @@ export const Navbar = () => {
                 <Moon className="absolute h-4 w-4 mr-2 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 Toggle theme
               </Button>
-              
+
               <div className="px-3 py-2">
                 <Link to="/login">
-                  <Button className="btn-hero w-full" onClick={() => setIsOpen(false)}>
+                  <Button
+                    className="btn-hero w-full"
+                    onClick={() => setIsOpen(false)}
+                  >
                     Get Started
                   </Button>
                 </Link>
