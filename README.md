@@ -1,4 +1,3 @@
-````markdown
 # EchoMind — Intelligent Audio Conversation Analyzer  
 [![GitHub Repo](https://img.shields.io/badge/repo-EchoMind-blue)](https://github.com/Hussainaakash11/EchoMind.git)
 
